@@ -1,6 +1,8 @@
 {
     "name": "ExpoDevContainer",
     "image": "mcr.microsoft.com/devcontainers/typescript-node:20",
+    "postCreateCommand": "./.devcontainer/post-create-script.sh",
+    "mounts": ["source=expo_node_module,target=${containerWorkspaceFolder}/node_modules,type=volume"],
     "forwardPorts": [
         8081
       ],
